@@ -1,0 +1,178 @@
+@mixin features {
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  color:gray;
+}
+
+.price_section {
+  margin-top: 50px;
+  h1 {
+    font-size: 25px;
+    display: block;
+    border-bottom: 5px solid lightseagreen;
+    width: 180px;
+    margin: 15px 0 70px 50px;
+    color: gray;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .background-active {
+    background: lightseagreen;
+    border: 1px solid lightseagreen;
+  }
+}
+
+.price-background {
+  padding-top: 30px;
+  width: 80%;
+  background: #f2f2f2;
+  margin: 0 auto;
+}
+
+.price-plan {
+  height: 500px;
+  width: 30%;
+  min-width: 250px;
+  border: 2px solid lightgray;
+  background: white;
+  margin: 0 10px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid lightgray;
+    background: white;
+    top: -25px;
+    left: 40%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .smaller-circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: lightgray;
+    }
+   }
+    .circle-active {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: lightseagreen;
+      top: -25px;
+      left: 40%;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .smaller-circle-active {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: white;
+      }
+    }
+  .price-plan-header {
+    padding: 30px 0 30px 0;
+    font-size: 25px;
+    color: lightseagreen;
+    font-weight: bold;
+  }
+  .font-white {
+    color: white;
+  }
+  .price-of-plan {
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    margin-bottom: 35px;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 40px;
+      color: gray;
+      sup {
+        font-size: 0.4em;
+      }
+    }
+    p {
+      color: gray;
+    }
+  }
+  .features {
+    background: #dbdbdb;
+    @include features;
+  }
+  .features-lighter {
+    background: #ededed;
+    @include features
+  }
+  .plan-choice {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: white;
+    width: 125px;
+    height: 35px;
+    background: lightseagreen;
+    border: 1px solid lightseagreen;
+    border-radius: 8px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .first {
+    margin-top: 110px;
+  }
+  .second {
+    margin-top: 70px;
+    background: white;
+    color: lightseagreen;
+  }
+  .third {
+    margin-top: 31px;
+  }
+  .background-white {
+    background: white;
+  }
+}
+
+@media (max-width: 1240px) {
+  .price-plan {
+    margin-top: 15px;
+    .features {
+      font-size: 20px;
+    }
+    .features-lighter {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 715px) {
+  .price-header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 35px;
+  }
+  .price_section {
+    h1 {
+      width: 130px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

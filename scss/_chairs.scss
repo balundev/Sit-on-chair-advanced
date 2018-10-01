@@ -1,0 +1,89 @@
+@mixin title {
+  font-size: 15px;
+  display: block;
+  border-bottom: 5px solid lightseagreen;
+  width: 40%;
+}
+
+
+.chairs {
+  padding-top: 30px;
+  margin: 0 auto;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.suggested-pool1 {
+  position: relative;
+  width: 328px;
+  height: 230px;
+  margin: 0 5px 0 5px;
+}
+
+.suggested-pool2 {
+  position: relative;
+  width: 328px;
+  height: 230px;
+  margin: 0 5px 0 5px;
+}
+
+.hidden-pool-discription {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 329px;
+  height: 70px;
+  background: rgba(240, 240, 240, 0.5);
+  padding-top: 10px;
+  padding-left: 10px;
+  p {
+    @include title;
+  }
+
+}
+
+.suggested-pool-discription {
+  border: 1px solid lightgray;
+  padding: 30px 20px 30px 20px;
+  width: 360px;
+  h1 {
+    font-size: 15px;
+    display: block;
+    border-bottom: 5px solid lightseagreen;
+    width: 40%;
+  }
+  p {
+    padding: 15px 0 10px 0;
+    color: gray;
+  }
+}
+@media (max-width: 1070px) {
+  .chairs {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .suggested-pool-discription{
+      width: 656px;
+    }
+  }
+}
+@media (max-width: 700px){
+  .chairs{
+    .suggested-pool-discription{
+      width: 328px;
+    }
+    .suggested-pool1{
+      margin-bottom: 15px;
+    }
+    .suggested-pool2{
+      margin-bottom: 15px;
+    }
+  }
+}
+
