@@ -1,7 +1,31 @@
+
+.span-menu {
+  width:60px;
+  height: 40px;
+  border:0;
+  background: lightgray;
+  position: absolute;
+  border-radius: 2px;
+  top:6px;
+  left:6px;
+  z-index: 20;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  span {
+    display: block;
+    width: 90%;
+    margin: 2px;
+    height: 4px;
+    background: white;
+    text-align: center;
+  }
+}
 .page-header {
   width: 100%;
   background: black;
-  height: 40px;
+  height: 50px;
 }
 .page-header{
   .container{
@@ -12,6 +36,7 @@
 }
 .logo {
   color:white;
+  font-size: 20px;
   span{
     margin: 0 3px 0 3px;
     font-weight: bold;
@@ -21,10 +46,68 @@
 .nav-list {
   display: flex;
   list-style: none;
-  li{
+  li {
     text-decoration: none;
     font-weight: bold;
     margin-right: 30px;
     text-transform: uppercase;
+  }
+  .about {
+    position: relative;
+  }
+  .sub-menu {
+    position: absolute;
+    width: 130px;
+    left: -25px;
+    display: none;
+    z-index: 50;
+  }
+}
+@keyframes subMenu {
+  0% {
+    opacity: 0.2;
+    top: -100px;
+  }
+  100% {
+    opacity: 100%;
+    top: 0;
+  }
+}
+
+.sub-list {
+  z-index: 50;
+  margin-top: 40px;
+  padding-top: 10px;
+  list-style: none;
+  background: black;
+  color: white;
+  font-size: 13px;
+  position: relative;
+  animation: subMenu 1s 0s alternate;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: black;
+    transform: rotate(45deg);
+    top: -7px;
+    left: 40%;
+  }
+
+  li {
+    padding: 10px;
+  }
+}
+@media (max-width: 850px){
+  .span-menu {
+    display: flex;
+  }
+  .navbar{
+    display: none;
+  }
+  .logo{
+    display: none;
   }
 }

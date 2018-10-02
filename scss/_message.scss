@@ -1,0 +1,90 @@
+
+.message-section {
+  h1 {
+    display: block;
+    width: 30%;
+    border-bottom: 5px solid lightseagreen;
+    min-width: 250px;
+    margin: 40px 0 30px 0;
+  }
+}
+
+.post-question {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  min-width: 330px;
+  input {
+    height: 65px;
+    margin: 15px 0 15px 0;
+    border: 1px solid lightseagreen;
+    &::placeholder{
+      padding-left: 15px;
+      font-size: 30px;
+      color:lightgray;
+    }
+  }
+  textarea {
+    height: 190px;
+    margin-top: 15px;
+    border: 1px solid lightseagreen;
+    &::placeholder {
+      padding: 15px 0 0 15px;
+      font-size: 30px;
+      color: lightgray;
+    }
+  }
+}
+
+.sending-section {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 340px;
+  align-items: center;
+}
+.sending-section-img{
+  width: 264px;
+  height: 210px;
+  background-image: url("../images/red_chair.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.sending-section-copyrights {
+  margin: 30px 0 30px 0;
+  display: flex;
+  .copyrights-label{
+    margin-left: 20px;
+    color: gray;
+    width: 250px;
+  }
+}
+#copyrights {
+  width: 50px;
+  height: 50px;
+}
+.message-button {
+  width: 70%;
+  font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid lightseagreen;
+  background: lightseagreen;
+  margin-bottom: 40px;
+
+}
+
+@media (max-width: 885px) {
+  .sending-section-img {
+    display: none;
+  }
+}

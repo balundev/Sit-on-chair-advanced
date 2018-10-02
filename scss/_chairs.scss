@@ -42,7 +42,23 @@
   p {
     @include title;
   }
+}
+.one {
+  display: none;
+  animation: pictureDiscription 1s 0s alternate;
+}
+.two {
+  display: none;
+  animation: pictureDiscription 1s 0s alternate;
+}
 
+@keyframes pictureDiscription {
+   0%{
+     opacity: 0;
+   }
+  100% {
+    opacity: 1;
+  }
 }
 
 .suggested-pool-discription {
