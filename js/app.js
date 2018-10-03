@@ -81,7 +81,10 @@ picture2.addEventListener("mouseout", function f() {
 
 
 /// order section
-var summ = 0;
+var summ1 = 0;
+var summ2 = 0;
+var summ3 = 0;
+var finalSumm = 0;
 var chairTypeSelect = document.querySelector(".type");
 var inputFirstValue = chairTypeSelect.value;
 var yourChairCost = document.querySelector(".chair-type-costs");
@@ -89,15 +92,21 @@ var chairColor = document.querySelector(".color");
 var inputColorValue = chairColor.value;
 var chairMaterial = document.querySelector(".material");
 var chairName = document.querySelector(".chair-type h2");
+var finalPrice = document.querySelector(".order-box-summ p");
 
 
 chairTypeSelect.addEventListener("change", function () {
+    var clair = 200;
+    var margarita = 150;
+    var selena = 250;
    inputFirstValue = chairTypeSelect.value;
     if(inputFirstValue == "Clair"){
+        selena = 0;
+        margarita = 0;
         chairName.innerText = "Chair Clair";
-        summ=200;
         var basicPrice = document.querySelector(".basic-price");
         if(basicPrice == null){
+
             var costSpan = document.createElement("span");
             costSpan.innerText = "200";
             costSpan.className = "basic-price";
@@ -106,8 +115,9 @@ chairTypeSelect.addEventListener("change", function () {
             basicPrice.innerText  = "200";
         }
     }else if(inputFirstValue == "Margarita"){
+        selena = 0;
+        clair = 0;
         chairName.innerText = "Chair Margarita";
-        summ=150;
         var basicPrice = document.querySelector(".basic-price");
         if(basicPrice == null){
             var costSpan = document.createElement("span");
@@ -119,6 +129,8 @@ chairTypeSelect.addEventListener("change", function () {
         }
 
     }else if(inputFirstValue == "Selena"){
+        margarita = 0;
+        clair = 0
         chairName.innerText = "Chair Selena";
         summ=250;
         var basicPrice = document.querySelector(".basic-price");
@@ -131,7 +143,9 @@ chairTypeSelect.addEventListener("change", function () {
             basicPrice.innerText  = "250";
         }
     }
-
+    summ1 = margarita + clair + selena;
+    finalSumm = summ1+summ2+summ3;
+    finalPrice.innerText = finalSumm;
 })
 // chair image input
 chairColor.addEventListener("change", function () {
@@ -154,8 +168,11 @@ chairMaterial.addEventListener("change", function () {
     var inputMaterialValue = chairMaterial.value;
     var materialName = document.querySelector(".material-span");
     var materialPrice = document.querySelector(".material-price");
-
+    var leatherCost= 80;
+    var fabricCost = 20;
     if(inputMaterialValue == "Skóra"){
+        leatherCost = 80;
+        fabricCost = 0;
         if(materialName==null & materialPrice==null){
             var leather = document.createElement("span");
             leather.innerText = "Skóra";
@@ -171,6 +188,8 @@ chairMaterial.addEventListener("change", function () {
             materialPrice.innerHTML = "80";
         }
     }else if(inputMaterialValue == "Tkanina"){
+        leatherCost = 0;
+        fabricCost = 20;
         if(materialName==null & materialPrice==null){
             var leather = document.createElement("span");
             leather.innerText = "Tkanina";
@@ -185,13 +204,16 @@ chairMaterial.addEventListener("change", function () {
             materialPrice.innerHTML = "20";
         }
     }
-
+    summ2 =leatherCost+ fabricCost;
+    finalSumm = summ1+summ2+summ3;
+    finalPrice.innerText = finalSumm;
 })
 
 // transport
 transport.addEventListener("click",function () {
     var transport = document.querySelector("#transport");
     if(transport.checked == true){
+        summ3 = 50;
         var addTransport = document.createElement("span");
         addTransport.innerText = "transport";
         addTransport.className = "transportName"
@@ -201,12 +223,15 @@ transport.addEventListener("click",function () {
         transportCost.className = "transportCost"
         yourChairCost.appendChild(transportCost);
     }else{
+        summ3 = 0;
         var noTransport = document.querySelector(".transportName");
         noTransport.parentElement.removeChild(noTransport);
         var noTransportCost = document.querySelector(".transportCost");
         noTransportCost.parentElement.removeChild(noTransportCost);
     }
+    finalSumm = summ1+summ2+summ3;
+    finalPrice.innerText = finalSumm;
 })
 
 //summ
-var finalPrice = document.querySelector(".order-box-summ p");
+
