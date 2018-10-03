@@ -3,6 +3,6 @@ Advanced RWD webpage
 
 My another webpage created durning bootcamp
 
-Responsive webpage, RWD was created without template (checked on my mobile Huawei p8 lite)
+Responsive webpage, RWD was created without template, just my own idea.
 
-Used HTML5, Sass, gulp and javascript.
+Used HTML5, Sass, gulp and javascript. (wanted to no use jQuery)
