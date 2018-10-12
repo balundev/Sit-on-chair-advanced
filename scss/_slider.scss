@@ -46,16 +46,8 @@
 .slider-img {
     max-width: 400px;
     position: absolute;
-    animation: pictureChange 4s 0s infinite;
 }
-@keyframes pictureChange {
-  0% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
+
 
 .discription-section{
   text-align: center;
@@ -104,15 +96,6 @@
   .image-section {
     img {
       max-width: 300px;
-      animation: pictureChange 4s 0s infinite;
-    }
-  }
-  @keyframes pictureChange {
-    0% {
-      opacity: 0.3;
-    }
-    100% {
-      opacity: 100%;
     }
   }
 }

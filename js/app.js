@@ -13,8 +13,8 @@ var subMenu = document.querySelector(".sub-menu");
 // picture discription
 var hiddenDiscription = document.querySelector(".one");
 var hiddenDiscription2 = document.querySelector(".two");
-var picture1 = document.querySelector(".suggested-pool1")
-var picture2 = document.querySelector(".suggested-pool2")
+var picture1 = document.querySelector(".suggested-pool1");
+var picture2 = document.querySelector(".suggested-pool2");
 //
 listElement.addEventListener("mouseover",function () {
     subMenu.style.display = "block";
@@ -29,7 +29,7 @@ listElement.addEventListener("mouseout",function () {
 function slider() {
 
     var slide = function (){
-        counter++
+        counter++;
         if(counter>imagesLength-1){
             counter=0;
             image.src = images[counter];
@@ -38,10 +38,10 @@ function slider() {
         }
     };
 
-    var autoslide = setInterval(slide ,4000);
+    var autoSlide = setInterval(slide ,4000);
 
     slideNext.addEventListener("click", function () {
-        clearInterval(autoslide);
+        clearInterval(autoSlide);
         if(counter<imagesLength-1){
             counter++
             image.src = images[counter]
@@ -52,7 +52,7 @@ function slider() {
     });
     slidePrev.addEventListener("click", function () {
         image.style.animation = "none";
-        clearInterval(autoslide);
+        clearInterval(autoSlide);
         if(counter-1<0){
             counter = imagesLength-1;
             image.src = images[counter]
