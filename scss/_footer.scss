@@ -17,7 +17,11 @@
   .media {
     width: 40px;
     height: 40px;
+    transition: 0.6s;
     background-repeat: no-repeat;
+    &:hover{
+      transform: scale(1.2);
+    }
 
   }
 }

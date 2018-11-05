@@ -78,8 +78,14 @@
   font-weight: bold;
   border-radius: 8px;
   border: 1px solid lightseagreen;
-  background: lightseagreen;
+  background-color: lightseagreen;
   margin-bottom: 40px;
+  transition: 0.6s;
+  &:hover{
+    color:lightseagreen;
+    background-color: white;
+    cursor: pointer;
+  }
 
 }
 

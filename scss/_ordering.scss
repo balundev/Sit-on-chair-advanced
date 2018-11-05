@@ -112,10 +112,16 @@
   height: 40px;
   font-size: 18px;
   color:white;
-  background: lightseagreen;
+  background-color: lightseagreen;
   border-radius: 6px;
   border: 1px solid lightseagreen;
   margin: 20px 0 20px 0;
+  transition: 0.6s;
+  &:hover{
+    background-color: white;
+    color: lightseagreen;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 1010px){
